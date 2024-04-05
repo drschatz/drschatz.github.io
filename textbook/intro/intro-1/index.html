@@ -4,6 +4,8 @@
   class="color-toggle-hidden"
   
 >
+<link rel="stylesheet" href="/custom.css">
+
   <head>
     <meta charset="UTF-8" />
 <meta name="referrer" content="no-referrer" />
@@ -65,7 +67,7 @@ First we have the return type, in this case it is an integer or int. Then we hav
       "url" : "http://localhost/textbook/intro/intro-1/",
       "headline": "First C++ Program",
       "description": "When running a C\u002b\u002b program the computer always looks for and runs a function called main.\nint main() { } A function in C\u002b\u002b is formatted in a similar way than to Java or Kotlin!\nFirst we have the return type, in this case it is an integer or int. Then we have the name of the function, in this case main. After the name are any parameters the function takes in, in this case none.",
-      "wordCount" : "300",
+      "wordCount" : "307",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -526,13 +528,26 @@ To print out values from your program  in C++ involves a few steps.
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span></span></span></code></pre></div>
 <p>We also need to tell the program we are using code from the standard library. We can do this by adding the following,</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span></span></span></code></pre></div>
-<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<p><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span>
 </span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Hello World&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">}</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 <strong>OUTPUT:</strong> Hello World
 <br></p>
 <p><code>cout</code> is a type of stream which has values inserted into it with the insertion operators <code>&lt;&lt;</code>. The program will then print the contents of the cout stream to the terminal.</p>
