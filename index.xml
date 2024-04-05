@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CS 128 Live Textbook</title>
+    <title>CS 128 on CS 128 Live Textbook</title>
     <link>http://localhost/</link>
-    <description>Recent content on CS 128 Live Textbook</description>
+    <description>Recent content in CS 128 on CS 128 Live Textbook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <atom:link href="http://localhost/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First C&#43;&#43; Program</title>
-      <link>http://localhost/intro/intro-1/</link>
+      <link>http://localhost/textbook/intro/intro-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost/intro/intro-1/</guid>
+      <guid>http://localhost/textbook/intro/intro-1/</guid>
       <description>When running a C++ program the computer always looks for and runs a function called main.&#xA;int main() { } A function in C++ is formatted in a similar way than to Java or Kotlin!&#xA;First we have the return type, in this case it is an integer or int. Then we have the name of the function, in this case main. After the name are any parameters the function takes in, in this case none.</description>
     </item>
     <item>
       <title>Objects, Types, and Variables</title>
-      <link>http://localhost/intro/intro-2/</link>
+      <link>http://localhost/textbook/intro/intro-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost/intro/intro-2/</guid>
+      <guid>http://localhost/textbook/intro/intro-2/</guid>
       <description>Objects, types, and variables all work together to help us write programs in C++. Objects have a type and are referred to by their variable name. For example,&#xA;int x = 9; This line of code is asking the computer for a space in memory for an object of type int that is currently the value 9. This object can be accessed later by its variable name, x.&#xA;Terminology Word Definition Examples Type Defines a set of possible values and a set of operations for an object.</description>
     </item>
   </channel>

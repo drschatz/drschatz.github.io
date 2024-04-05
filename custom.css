@@ -2,3 +2,7 @@
 .julecode {
     line-height: 5; /* Adjust the value as needed */
 }
+
+.button-bright {
+    color: "#fcba03";
+}
