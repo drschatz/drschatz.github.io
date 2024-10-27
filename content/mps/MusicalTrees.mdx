@@ -163,11 +163,11 @@ Traverse every node in the tree and select a subset of nodes based on the follow
   - `SP(node)`: Selection probability of node: `max(fitness score of the node divided by 100, 0.10)`
 
 #### Selection Phase Verbose Printing Requirements
-```cpp
-//print once at start of selecting
+
+Print once at start of selecting
 cout << "SelectNodes: " << endl;
 
-//For every node considered for selection (assuming your variable for the current node is called node)
+For every node considered for selection (assuming your variable for the current node is called node)
 cout << "node: ";
 for (unsigned int i = 0; i < node->GetMotif().size(); i++) {
   cout << node->GetMotif()[i].pitch << "-" << node->GetMotif()[i].duration << " ";
@@ -175,13 +175,12 @@ for (unsigned int i = 0; i < node->GetMotif().size(); i++) {
 cout << endl;
 cout << "  Fitness_Score: " << node->GetFitnessScore() << endl;
 
-//Assuming your variable name for the random probability is called random_prob
+Assuming your variable name for the random probability is called random_prob
 cout << "  Selection Prob: " << random_prob << endl;
 
-//One of the following depending on the decision, 
+One of the following depending on the decision, 
 cout << "  Selected" << endl;
-cout << "  Not Selected" << endl;```
-    
+cout << "  Not Selected" << endl; 
 
 
 ### Reproduction Phase
