@@ -180,7 +180,8 @@ cout << "  Selection Prob: " << random_prob << endl;
 
 One of the following depending on the decision, 
 cout << "  Selected" << endl;
-cout << "  Not Selected" << endl; ```
+cout << "  Not Selected" << endl; 
+```
 
 
 ### Reproduction Phase
@@ -190,6 +191,22 @@ Each note in the parent's motif is mutated for the child motif by adding a rando
 value between -0.1 and 0.1 to the duration. However, the pitch cannot be less than 0 or greater than 127. The duration cannot be less 
 than 0.1 and greater than 0.5. If the new mutated value exceeds these, adjust it to the nearest valid value. For example, if the pitch 
 is mutated to -1, it would be adjusted to 0. Don't forget to update the size in this phase!
+
+#### Reproduction Phase Verbose Printing Requirements
+```
+For each selected node print the following, (assuming the selected node's variable name is node)
+cout << "Reproduce: ";
+for (unsigned int i = 0; i < node->GetMotif().size(); i++) {
+  cout << node->GetMotif()[i].pitch << "-" << node->GetMotif()[i].duration << " ";
+}
+cout << endl;
+
+Then print the new, mutated, child (assuming the new motif of the child is called child_motif.)
+cout << " Child: ";
+for (unsigned int i = 0; i < child_motif.size(); i++) {
+  cout << child_motif[i].pitch << "-" << child_motif[i].duration << " ";
+}
+cout << endl; ```
 
 ### Pruning Phase
 
