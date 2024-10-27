@@ -12,6 +12,7 @@ chapterTitle: "MPs"
 chapterIdx: 3
 sectionIdx: 3
 ---
+**Note**: This MP is significantly more work per day than the Seam Carver MP2.
 
 ## Important Dates
 
@@ -25,7 +26,22 @@ Part 2 Due Date: Thursday XX at 11:59pm (90 points) (10% point reduction if subm
 
 ## Introduction
 
-In this MP, you will create a program that generates musical melodies using a tree structure and a genetic algorithm. You do not need to have a background in music to successfully complete this project. These specifications will provide all the background you will need.
+In this MP, you will create a program that generates musical melodies using a tree structure and a genetic algorithm. 
+Don't worry, you do not need to have a background in music to successfully complete this project. These specifications will provide 
+all the background you will need.
+
+Your program will start with a series of notes that do not sound melodic, like this:
+<audio controls>
+  <source src="/audio/starting.mp3" type="audio/mp3" />
+  Your browser does not support the audio element.
+</audio>
+
+Your program will then run a genetic algorithm to continuously produce new notes that eventually sound more melodic. For example
+after running the program for 1,000 generations the starting sound turned into this:
+<audio controls>
+  <source src="/audio/output.mp3" type="audio/mp3" />
+  Your browser does not support the audio element.
+</audio>
 
 ## Learning goals
 
@@ -58,12 +74,6 @@ The tree will start with just a root node, whose motif forms the starting melody
 and prune others. After many iterations of this process, there will be 1-2 motifs left, which will make up the end melody that
 hopefully sounds more melodic than the starting one!
 
-To hear an example of the musical motifs generated, click play below.
-
-<audio controls>
-  <source src="/audio/output.mp3" type="audio/mp3" />
-  Your browser does not support the audio element.
-</audio>
 
 ## Recommended Steps
 
@@ -71,8 +81,6 @@ To hear an example of the musical motifs generated, click play below.
 2. Get the starter code and read through each file.
 3. Work on Part 1 (Due Thursday the XX at 11:59pm).
 4. Work on Part 2 (Due Thursday the XX at 11:59pm).
-
-**Note**: This MP is significantly more work per day than the Seam Carver MP2.
 
 ## Part 1
 
