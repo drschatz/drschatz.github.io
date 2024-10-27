@@ -27,8 +27,6 @@ Part 2 Due Date: Thursday XX at 11:59pm (90 points) (10% point reduction if subm
 ## Introduction
 
 In this MP, you will create a program that generates musical melodies using a tree structure and a genetic algorithm. 
-Don't worry, you do not need to have a background in music to successfully complete this project. These specifications will provide 
-all the background you will need.
 
 Your program will start with a series of notes that do not sound melodic, like this:
 <audio controls>
@@ -43,11 +41,13 @@ after running the program for 1,000 generations the starting sound turned into t
   Your browser does not support the audio element.
 </audio>
 
-Afterwards, you can even take that tune and make it into fire mixtape (not included in this MP).
+Afterwards, you can even take that tune and make it into a 🔥 mixtape (not included in this MP).
 <audio controls>
   <source src="/audio/remix.mp3" type="audio/mp3" />
   Your browser does not support the audio element.
 </audio>
+
+If you make a cool tune please share on the Ed discussion board!
 
 ## Learning goals
 
@@ -92,7 +92,7 @@ hopefully sounds more melodic than the starting one!
 
 In Part 1, you will be implementing the `MotifNode` class that will be used as the nodes for the tree in Part 2.
 
-A `MotifNode` holds a motif (vector of notes), a vector of pointers to its children `MotifNodes`, and a pointer to its parent `MotifNode`.
+A `MotifNode` holds a motif (vector of notes), the fitness score of the motif, a vector of pointers to its children `MotifNodes`, and a pointer to its parent `MotifNode`.
 Fill in the member functions in `motif_node.cc` as they are specified in `motif_node.hpp`. Make sure the invariant below is true at the
 end of every member function. Note, you can use `this` to access your own address inside of a member function.
 
@@ -112,7 +112,7 @@ Additionally, it is a good idea to test REQUIRES clauses when possible with asse
 ## Part 2
 
 In Part 2, you will be implementing the `MusicalTree` class. This class is used to create and maintain a tree of `MotifNodes` through
-the genetic algorithm. This part is more involved than Part 1 and will most likely take significantly more time. Please plan accordingly!
+a genetic algorithm. This part is more involved than Part 1 and will most likely take significantly more time. Please plan accordingly!
 
 A `MusicalTree` maintains `MotifNodes` on the free store/heap. It only keeps track of the root of the tree and the current size (number of `MotifNodes`).
 
@@ -127,7 +127,7 @@ Once you have completed the graded version of the project, feel free to adjust p
 - Every node, except the root, has exactly 1 parent and is inside of the `children` vector of that parent.
 - The size of the tree is the number of valid `MotifNodes` connected through the root.
 
-When and for debugging, I recommend writing and calling a function to check the invariants (as much as possible) at the end of every member function. This will alert you to bugs immediately.
+For debugging, I recommend writing and calling a function to check the invariants (as much as possible) at the end of every member function. This will alert you to bugs immediately.
 For example, breaking an invariant in function A may not cause the program to break until function B is called, making it a challenge to figure out where the orignal problem started.
 
 For running the final product, please comment out the function calls to the invariant checks, as they do significantly slow down the algorithm.
