@@ -132,7 +132,27 @@ For example, breaking an invariant in function A may not cause the program to br
 
 For running the final product, please comment out the function calls to the invariant checks, as they do significantly slow down the algorithm.
 
+Your work will be graded in part with specific function tests and with a script that analyzes the output your program produces. The
+functions in musical_tree.hpp marked required are needed to grade your work, do not change their declerations. To grade your output
+you need to use the exact print statements required. To help, I have included all the cout statements I used in the solution code for you
+to copy and paste as needed. They can be found in the print_statement_reference.txt file. 
+
+For this MP, you will not submit your driver.cc file. A version is given to you that should work with your code. The driver.cc file as well as the utilities.cc file
+work together to take your code from musical_tree.cc and turn it into an MP3 file. This is optional and not graded. To reiterate, the only graded files are musical_tree.hpp, 
+musical_tree.cc, and motif_node.cc.
+
+Printing out a lot of statements is needed to grade your work but it also slows down your program. To help, the MusicalTree class takes in a boolean when
+constructed called verbose. When set to true, your program needs to print all the output required for grading and nothing extra. When set to false your program
+can print as little or as much as you would like. 
+
 ## Genetic Algorithm Details
+
+Your code in the GeneticAlgorithm function will run the following steps 
+1. Evolve [selection + reproduction] (1 - 10 times) **you decide how many
+2. Go through X number of generations **X is a parameter given
+  1. Evolve [selection + reproduction] (1 - 10 times) **you decide how many
+  2. Prune 
+3. Final Prune
 
 ### Selection Phase
 
@@ -141,6 +161,20 @@ Traverse every node in the tree and select a subset of nodes based on the follow
 - if `RP < SP(node)` --> select node
   - `RP`: Random probability, a random value between 0 and 1
   - `SP(node)`: Selection probability of node: `max(fitness score of the node divided by 100, 0.10)`
+
+#### Selection Phase Verbose Printing Requirements
+ - Start with "SelectNodes: " followed by a newline
+ - For each node visited/considered for selection print,
+    ```cout << "node: ";
+    for (unsigned int i = 0; i < node->GetMotif().size(); i++) {
+      cout << node->GetMotif()[i].pitch << "-" << node->GetMotif()[i].duration
+           << " ";
+    }```
+    ```cout << "  Fitness_Score: " << node->GetFitnessScore() << endl;```
+     ```cout << "  Selection Prob: " << random_prob << endl;```
+    ```cout << "  Selected" << endl; ``` or  ```cout << "  Not Selected" << endl; ```
+    
+
 
 ### Reproduction Phase
 
@@ -174,3 +208,8 @@ To start, the code should initialize the starting motif to `{35, 0.1}, {56, 1.0}
   4. Prune the tree based on this updated threshold.
 
 TODO UPDATE
+
+## Credits
+
+Written by Jule Schatz 2024, "Money doesn't grow on trees, but music sure does."
+
