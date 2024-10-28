@@ -154,6 +154,17 @@ Your code in the GeneticAlgorithm function will run the following steps
    - Prune 
 3. Final Prune
 
+```
+Every selection + reproduction cycle must start with the print statement
+cout << "EVOLVE" << endl;
+
+See the selection and reproduction phase details below for their print statements
+
+For every generation, start by printing, 
+cout << "GEN " << generation << " size: " << size_ << endl;
+
+
+
 ### Selection Phase
 
 Traverse every node in the tree and select a subset of nodes based on the following:
@@ -183,7 +194,6 @@ cout << "  Selected" << endl;
 cout << "  Not Selected" << endl; 
 ```
 
-
 ### Reproduction Phase
 
 Each selected node creates and adds a new child to themselves using the `mutate` function to create the new motif for the child.
@@ -201,7 +211,7 @@ for (unsigned int i = 0; i < node->GetMotif().size(); i++) {
 }
 cout << endl;
 
-Then print the new, mutated, child (assuming the new motif of the child is called child_motif.)
+Then print the new child's motif(assuming the new motif of the child is called child_motif.)
 cout << " Child: ";
 for (unsigned int i = 0; i < child_motif.size(); i++) {
   cout << child_motif[i].pitch << "-" << child_motif[i].duration << " ";
@@ -215,28 +225,50 @@ This phase removes nodes from the tree that have a motif that evaluates below a 
 
 - If the node that needs to be pruned is the last node in the tree, do nothing.
 - If the node that needs to be pruned has no children, remove it from the tree.
-- If the node that needs to be pruned has children, recursively prune all children and their children... etc. Afterward, if the node still has children, rotate up its last child into its place, combining their children.
+- If the node that needs to be pruned has children, recursively prune all children and their children... etc. Afterward, if the node still has children, 
+  rotate up one of its children into its place, combining their children.
 
-### Fitness Score
+The PruneNodes function is a required function and must implement the above steps for full points. 
+The function does not need any print statements.
 
-The fitness score is how we will evaluate if a motif sounds melodic or not. We are going to evaluate each motif based on its harmonic qualities. All the music theory research has been done for you! You just need to implement it.
+During each generation there will be a pruning phase.
+``` 
+Start by printing, 
+cout << "PRUNE " << endl;
+cout << " size: " << size_ << endl;
+```
 
-TODO UPDATE
+Then start the threhold for pruning at the value 10 and prune all nodes below that threshold. If there are still more than 
+200 nodes in the tree, increase the threshold by 1 and prune again. 
+``` 
+After each prune print,
+cout << "  prune cutoff: " << prune << endl;
+cout << "  size: " << size_ << endl;
+Then update the prune threshold.
+```
 
-The fitness score is a combination of all these two components. To get the points on the autograder, please follow the exact parameters. On your own, feel free to play around with this part to try and create even better motifs!
+For the final prune, you just need to print once, 
+```
+cout << "Final Prune " << size_ << endl;
+``` 
+
+After printing, you should reduce the tree to 1-2 nodes by 
+incrementing the threshold by 0.01 at a time. 
 
 ## Putting It Together
 
-To start, the code should initialize the starting motif to `{35, 0.1}, {56, 1.0}, {62, 0.2}, {79, 1.0}, {66, 0.1}, {78, 0.8}`.
+To start, the driver code will initialize the starting motif. I recommend using the following but you are free
+to choose any 6 notes and durations. `{50, 0.1}, {78, 0.7}, {84, 0.7}, {61, 0.4}, {67, 0.1}, {78, 0.1}`.
 
-- To help the tree get going, run the selection and reproduction phase 4 times.
-- Then, run the following steps `numGeneration` number of times:
-  1. Print out the generation number and the size of the tree.
-  2. Run the selection and reproduction phase 5 times.
-  3. Update the prune threshold as specified in `musical_trees.hpp` for the `DynamicPrune` function.
-  4. Prune the tree based on this updated threshold.
+Then the driver will run the genetic algorithm X generations.
 
-TODO UPDATE
+Finally, it will call GenerateMelody to create a single vector of all the notes in the tree. 
+
+To run the driver use 
+```
+make exec
+./bin/exec
+```
 
 ## Credits
 
