@@ -85,7 +85,7 @@ const LecturesPage = () => {
   );
   // Update the calendar to only show data before a specific date
   const filteredCalendar = calendar.filter(
-    (item) => new Date(item.date) <= new Date("2024-11-02")
+    (item) => new Date(item.date) <= new Date("2024-12-13")
   );
 
   const ongoings = [
@@ -478,12 +478,6 @@ const LecturesPage = () => {
             )}
           </ul>
         </div>
-      </div>
-      <div className="text-center mt-8">
-        <p className="text-3xl font-bold text-gray-800">
-          More weeks coming soon...<br></br>
-          <br></br>
-        </p>
       </div>
     </div>
   );
