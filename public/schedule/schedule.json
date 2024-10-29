@@ -1538,10 +1538,14 @@
         "ec_link": "",
         "ec_due_topic": "",
         "ec_due_link": "",
-        "quiz_topic": "",
-        "quiz_link": "",
-        "quiz_due_topic": "",
-        "quiz_due_link": ""
+        "quiz_topic": [
+            "Exam 2: Second Chance"
+        ],
+        "quiz_link": [
+            "/NA"
+        ],
+        "quiz_due_topic": [],
+        "quiz_due_link": []
     },
     {
         "day_idx": 53,
@@ -1567,10 +1571,14 @@
         "ec_link": "",
         "ec_due_topic": "",
         "ec_due_link": "",
-        "quiz_topic": "",
-        "quiz_link": "",
-        "quiz_due_topic": "",
-        "quiz_due_link": ""
+        "quiz_topic": [
+            "Exam 2: Second Chance"
+        ],
+        "quiz_link": [
+            "/NA"
+        ],
+        "quiz_due_topic": [],
+        "quiz_due_link": []
     },
     {
         "day_idx": 54,
@@ -1588,18 +1596,22 @@
         "lab_link": "",
         "lab_due_topic": "",
         "lab_due_link": "",
-        "mp_topic": "MP 3: Musical Trees",
-        "mp_link": "https://www.cs128live.org/course-book/mps/SeamCarver",
+        "mp_topic": "",
+        "mp_link": "",
         "mp_due_topic": "",
         "mp_due_link": "",
         "ec_topic": "",
         "ec_link": "",
         "ec_due_topic": "",
         "ec_due_link": "",
-        "quiz_topic": "",
-        "quiz_link": "",
-        "quiz_due_topic": "",
-        "quiz_due_link": ""
+        "quiz_topic": [
+            "Exam 2: Second Chance"
+        ],
+        "quiz_link": [
+            "/NA"
+        ],
+        "quiz_due_topic": [],
+        "quiz_due_link": []
     },
     {
         "day_idx": 55,
@@ -1617,8 +1629,8 @@
         "lab_link": "/NA",
         "lab_due_topic": "",
         "lab_due_link": "",
-        "mp_topic": "",
-        "mp_link": "",
+        "mp_topic": "MP 3: Musical Trees",
+        "mp_link": "https://www.cs128live.org/course-book/mps/SeamCarver",
         "mp_due_topic": "",
         "mp_due_link": "",
         "ec_topic": "",
