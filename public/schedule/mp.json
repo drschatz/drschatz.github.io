@@ -18,5 +18,15 @@
     "part3_due_date": "2024-10-24",
     "due_date": "2024-10-24",
     "link": "https://www.cs128live.org/course-book/mps/SeamCarver"
+  },
+  {
+    "idx": 3,
+    "topic": "MP 3: Musical Trees",
+    "date": "2024-11-07",
+    "part1_due_date": "2024-11-14",
+    "part2_due_date": "2024-11-21",
+    "part3_due_date": "NA",
+    "due_date": "2024-11-21",
+    "link": "https://www.cs128live.org/course-book/mps/SeamCarver"
   }
 ]
