@@ -12,20 +12,45 @@ chapterTitle: "MPs"
 chapterIdx: 3
 sectionIdx: 3
 ---
+Money doesn't grow on trees... but music does :D 
 
 ## Important Dates
 
-Part 1 Due Date: Thursday XX at 11:59pm (10 points) (10% point reduction if submitted within 24 hours late)
+Part 1 Due Date: Thursday 11/07 at 11:59pm (10 points) 
+(10% point reduction if submitted within 24 hours late)
 
 [Autograder Part 1](#)
 
-Part 2 Due Date: Thursday XX at 11:59pm (90 points) (10% point reduction if submitted within 24 hours late)
+Part 2 Due Date: Thursday 11/21 at 11:59pm (70 points) 
+(10% point reduction if submitted within 24 hours late) 
+(20% point reduction if submitted before 12/02 at 11:59pm)
 
 [Autograder Part 2](#)
 
 ## Introduction
 
-In this MP, you will create a program that generates musical melodies using a tree structure and a genetic algorithm. You do not need to have a background in music to successfully complete this project. These specifications will provide all the background you will need.
+In this MP, you will create a program that generates musical melodies using a tree structure and a genetic algorithm. 
+
+Your program will start with a series of notes that do not sound melodic, like this:
+<audio controls>
+  <source src="/audio/starting.mp3" type="audio/mp3" />
+  Your browser does not support the audio element.
+</audio>
+
+Your program will then run a genetic algorithm to continuously produce new notes that eventually sound more melodic. For example
+after running the program for 1,000 generations the starting sound turned into this:
+<audio controls>
+  <source src="/audio/output.mp3" type="audio/mp3" />
+  Your browser does not support the audio element.
+</audio>
+
+Afterwards, you can even take that tune and make it into a 🔥 mixtape (not included in this MP).
+<audio controls>
+  <source src="/audio/remix.mp3" type="audio/mp3" />
+  Your browser does not support the audio element.
+</audio>
+
+If you make a cool tune please share on the Ed discussion board!
 
 ## Learning goals
 
@@ -43,7 +68,8 @@ Linked data structures (trees), recursion, classes, and dynamic memory.
 **Motif**: A musical fragment. In our case, a series of 6 notes, where each note has a pitch (0 - 127) and duration (0.1 - 0.7 seconds).  
 **Melody**: A combination of musical fragments. In our case, 2 or less motifs.
 
-**Genetic Algorithm**: A computational algorithm that is based on the ideas of natural selection. The algorithm runs for many iterations, called generations. In each generation, the following happens:
+**Genetic Algorithm**: A computational algorithm that is based on the ideas of natural selection. The algorithm runs for many iterations, 
+called generations. In each generation, the following happens:
 
 1. **Selection**: Items are selected based on a fitness score. Items with a higher fitness score are more likely to be chosen.
 2. **Reproduction**: Selected items reproduce, creating new items. The new items are based off of their parent but with mutations or other variation.
@@ -53,32 +79,16 @@ When run for many generations, the end result should be new items with high fitn
 
 ## Overview
 
-In this MP, you will implement a tree where each node in the tree holds a motif, a list of children, and a pointer to its parent.
+In this MP, you will implement a tree where each node in the tree holds a motif, the motif's fitness score, a list of children pointers, and a pointer to its parent.
 The tree will start with just a root node, whose motif forms the starting melody. The genetic algorithm will generate new nodes
 and prune others. After many iterations of this process, there will be 1-2 motifs left, which will make up the end melody that
 hopefully sounds more melodic than the starting one!
-
-To hear an example of the musical motifs generated, click play below.
-
-<audio controls>
-  <source src="/audio/output.mp3" type="audio/mp3" />
-  Your browser does not support the audio element.
-</audio>
-
-## Recommended Steps
-
-1. Read through all of the specifications.
-2. Get the starter code and read through each file.
-3. Work on Part 1 (Due Thursday the XX at 11:59pm).
-4. Work on Part 2 (Due Thursday the XX at 11:59pm).
-
-**Note**: This MP is significantly more work per day than the Seam Carver MP2.
 
 ## Part 1
 
 In Part 1, you will be implementing the `MotifNode` class that will be used as the nodes for the tree in Part 2.
 
-A `MotifNode` holds a motif (vector of notes), a vector of pointers to its children `MotifNodes`, and a pointer to its parent `MotifNode`.
+A `MotifNode` holds a motif (vector of notes), the fitness score of the motif, a vector of pointers to its children `MotifNodes`, and a pointer to its parent `MotifNode`.
 Fill in the member functions in `motif_node.cc` as they are specified in `motif_node.hpp`. Make sure the invariant below is true at the
 end of every member function. Note, you can use `this` to access your own address inside of a member function.
 
@@ -90,20 +100,18 @@ end of every member function. Note, you can use `this` to access your own addres
 
 ![enter image description here](https://www.cs128live.org/MotifNodeExample.png)
 
-Do not change the interface, i.e., the function signatures of any public member functions for `MotifNode`.
-The autograder assumes the interface of the starter code. However, feel free to add any additional helper
-member functions. However, please do not make any member variables public, as that will introduce potential errors in Part 2.
-Additionally, it is a good idea to test REQUIRES clauses when possible with asserts. This will also help with debugging in Part 2.
+The `MotifNode` class was designed to help you implement part 2 in a way that prevents hard to find bugs. Therefore you are only turning in 
+`MotifNode.cc` and cannot make changes to `MotifNode.hpp`.
 
 ## Part 2
 
 In Part 2, you will be implementing the `MusicalTree` class. This class is used to create and maintain a tree of `MotifNodes` through
-the genetic algorithm. This part is more involved than Part 1 and will most likely take significantly more time. Please plan accordingly!
+a genetic algorithm. This part is more involved than Part 1 and will most likely take significantly more time. Please plan accordingly!
 
-A `MusicalTree` maintains `MotifNodes` on the free store/heap. It only keeps track of the root of the tree and the current size (number of `MotifNodes`).
+A `MusicalTree` maintains `MotifNodes` on the free store/heap. It only keeps track of the root of the tree and the current size (number of connected `MotifNodes`).
 
 In order to grade your work, please follow the directions in the specifications and in the starter files exactly.
-Once you have completed the graded version of the project, feel free to adjust parameters and see if you can create an even better melody!
+Once you have completed the graded version of the project, feel free to adjust the parameters and see if you can create an even better melody!
 
 ### MusicalTree Invariants
 
@@ -113,12 +121,42 @@ Once you have completed the graded version of the project, feel free to adjust p
 - Every node, except the root, has exactly 1 parent and is inside of the `children` vector of that parent.
 - The size of the tree is the number of valid `MotifNodes` connected through the root.
 
-When and for debugging, I recommend writing and calling a function to check the invariants (as much as possible) at the end of every member function. This will alert you to bugs immediately.
+For debugging, I recommend writing and calling a function to check the invariants (as much as possible) at the end of every member function. This will alert you to bugs immediately.
 For example, breaking an invariant in function A may not cause the program to break until function B is called, making it a challenge to figure out where the orignal problem started.
 
 For running the final product, please comment out the function calls to the invariant checks, as they do significantly slow down the algorithm.
 
+Your work will be graded in part with specific function tests and with a script that analyzes the output your program produces. The
+functions in musical_tree.hpp marked required are needed to grade your work, do not change their declarations and implement them per the RMEs. 
+To grade your output you need to use the exact print statements required. To help, I have included all the cout statements I used in the solution code for you
+to copy and paste as needed. They can be found in the print_statement_reference.txt file. 
+
+For this MP, you will not submit your driver.cc file. A version is given to you that should work with your code. The driver.cc file as well as the utilities.cc file
+work together to take your code from musical_tree.cc and turn it into an MP3 file for you MP 3. This is optional and not graded. To reiterate, the only graded files are musical_tree.hpp, 
+musical_tree.cc, and motif_node.cc.
+
+Printing out a lot of statements is needed to grade your work but it also slows down your program. To help, the MusicalTree class takes in a boolean when
+constructed called verbose. When set to true, your program needs to print all the output required for grading and nothing extra. When set to false your program
+can print as little or as much as you would like. 
+
 ## Genetic Algorithm Details
+
+Your code in the GeneticAlgorithm function should run the following steps 
+1. Pre-Evolve [selection + reproduction] (1 - 10 times) **you decide how many
+2. Go through X number of generations **X is a parameter to the function
+   - Evolve [selection + reproduction] (1 - 10 times) **you decide how many
+   - Prune (details below)
+3. Final Prune
+
+```
+Every selection + reproduction cycle must start with the print statement
+cout << "EVOLVE" << endl;
+
+See the selection and reproduction phase details below for their print statements
+
+For every generation, start by printing, 
+cout << "GEN " << generation << " size: " << size_ << endl;
+```
 
 ### Selection Phase
 
@@ -126,37 +164,115 @@ Traverse every node in the tree and select a subset of nodes based on the follow
 
 - if `RP < SP(node)` --> select node
   - `RP`: Random probability, a random value between 0 and 1
-  - `SP(node)`: Selection probability of node: `max(fitness score of the node divided by 100, 0.10)`
+  - `SP(node)`: Selection probability of a node: max value between the fitness score of the node divided by 100 or 0.10
+
+#### Selection Phase Verbose Printing Requirements
+
+``` Print once at start of selecting
+cout << "SelectNodes: " << endl;
+
+For every node considered for selection (size of tree) print all the following statements. (assuming your variable for the current node is called node)
+cout << "node: ";
+for (unsigned int i = 0; i < node->GetMotif().size(); i++) {
+  cout << node->GetMotif()[i].pitch << "-" << node->GetMotif()[i].duration << " ";
+}
+cout << endl;
+cout << "  Fitness_Score: " << node->GetFitnessScore() << endl;
+
+Assuming your variable name for the random probability is called random_prob
+cout << "  Selection Prob: " << random_prob << endl;
+
+One of the following depending on the decision, 
+cout << "  Selected" << endl;
+cout << "  Not Selected" << endl; 
+```
 
 ### Reproduction Phase
 
-Each selected node creates and adds a new child to themselves using the `mutate` function to create the new motif for the child. Each note in the parent's motif is mutated for the child motif by adding a random value between -2 and 2 to the pitch and a random value between -0.1 and 0.1 to the duration. However, the pitch cannot be less than 0 or greater than 127. The duration cannot be less than 0.1 and greater than 0.5. If the new mutated value exceeds these, adjust it to the nearest valid value. For example, if the pitch is mutated to -1, it would be adjusted to 0. Don't forget to update the size in this phase!
+Each selected node creates and adds a new child to themselves using the `mutate` functionality to create the new motif for the child.
+Each note in the parent's motif is mutated for the child motif by adding a random value between -2 and 2 to the pitch and a random 
+value between -0.1 and 0.1 to the duration. However, the pitch cannot be less than 0 or greater than 127. The duration cannot be less 
+than 0.1 and greater than 0.7. If the new mutated value exceeds these, adjust it to the nearest valid value. For example, if the pitch 
+is mutated to -1, it would be adjusted to 0. Don't forget to update the size in this phase!
+
+#### Reproduction Phase Verbose Printing Requirements
+```
+For each selected node print the following, (assuming the selected node's variable name is node)
+cout << "Reproduce: ";
+for (unsigned int i = 0; i < node->GetMotif().size(); i++) {
+  cout << node->GetMotif()[i].pitch << "-" << node->GetMotif()[i].duration << " ";
+}
+cout << endl;
+
+Then print the new child's motif (assuming the new motif of the child is called child_motif)
+cout << " Child: ";
+for (unsigned int i = 0; i < child_motif.size(); i++) {
+  cout << child_motif[i].pitch << "-" << child_motif[i].duration << " ";
+}
+cout << endl; 
+```
 
 ### Pruning Phase
 
 This phase removes nodes from the tree that have a motif that evaluates below a threshold in terms of the fitness score. There are a few cases to consider:
 
 - If the node that needs to be pruned is the last node in the tree, do nothing.
-- If the node that needs to be pruned has no children, remove it from the tree.
-- If the node that needs to be pruned has children, recursively prune all children and their children... etc. Afterward, if the node still has children, rotate up its last child into its place, combining their children.
+- If the node that needs to be pruned has no children, just remove the node from the tree.
+- If the node that needs to be pruned has children, recursively prune all children and their children... etc if they fall below the threshold. 
+Afterward, if the node still has children, rotate up one of its children into it's own place, combining their children.
 
-### Fitness Score
+For example, if Node A has the children [B, C, D] and Node B has the children [E, F]. Let's say Node A is the only node out of the mentioned ones that has a fitness score
+less than the threshold. B would rotate up and replace A. B would now have the children [C, D, E, F] and B's parent would now be whoever A's parent was. 
 
-The fitness score is how we will evaluate if a motif sounds melodic or not. We are going to evaluate each motif based on its harmonic qualities. All the music theory research has been done for you! You just need to implement it.
+The PruneNodes function is a required function and must implement the above steps for full points. 
+The function itself does not need any print statements.
 
-TODO UPDATE
+During each generation there will be a pruning phase which does need print statements.
+``` 
+Start by printing, 
+cout << "PRUNE " << endl;
+cout << " size: " << size_ << endl;
+```
 
-The fitness score is a combination of all these two components. To get the points on the autograder, please follow the exact parameters. On your own, feel free to play around with this part to try and create even better motifs!
+Then start the threhold for pruning at the value 10 and prune all nodes below that threshold. If there are still more than 
+200 nodes in the tree, increase the threshold by 1 and prune again. Repeat.
+``` 
+After each prune print the following assuming the variable for the threshold is called prune
+cout << "  prune cutoff: " << prune << endl;
+cout << "  size: " << size_ << endl;
+Then update the prune threshold.
+```
+
+It could result in something like the following:
+"  prune cutoff: 10"
+"  size: 250"
+"  prune cutoff: 11"
+"  size: 190"
+
+For the final prune, you just need to print once, 
+```
+cout << "Final Prune " << size_ << endl;
+``` 
+
+After printing, you should reduce the tree to 1-2 nodes by 
+incrementing the threshold by 0.01 at a time. 
 
 ## Putting It Together
 
-To start, the code should initialize the starting motif to `{35, 0.1}, {56, 1.0}, {62, 0.2}, {79, 1.0}, {66, 0.1}, {78, 0.8}`.
+To start, the driver code will initialize the starting motif. I recommend using the following but you are free
+to choose any 6 notes and durations. `{50, 0.1}, {78, 0.7}, {84, 0.7}, {61, 0.4}, {67, 0.1}, {78, 0.1}`.
 
-- To help the tree get going, run the selection and reproduction phase 4 times.
-- Then, run the following steps `numGeneration` number of times:
-  1. Print out the generation number and the size of the tree.
-  2. Run the selection and reproduction phase 5 times.
-  3. Update the prune threshold as specified in `musical_trees.hpp` for the `DynamicPrune` function.
-  4. Prune the tree based on this updated threshold.
+Then the driver will run the genetic algorithm X generations.
 
-TODO UPDATE
+Finally, the driver will call GenerateMelody which should return a single vector of all the notes in the tree. 
+
+To run the driver use 
+```
+make exec
+./bin/exec
+```
+
+## Credits
+
+Written by Jule Schatz 2024
+
