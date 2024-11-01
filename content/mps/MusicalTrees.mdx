@@ -19,13 +19,13 @@ Money doesn't grow on trees... but music does :D
 Part 1 Due Date: Thursday 11/14 at 11:59pm (10 points) 
 (10% reduction if submitted within 24 hours late)
 
-[Autograder Part 1](#)
+[Autograder Part 1 Coming Soon](#)
 
 Part 2 Due Date: Thursday 11/21 at 11:59pm (70 points) 
 (10% reduction if submitted within 24 hours late) 
 (20% reduction if submitted before 12/02 at 11:59pm)
 
-[Autograder Part 2](#)
+[Autograder Part 2 Coming Soon](#)
 
 ## Introduction
 
@@ -61,6 +61,17 @@ If you make a cool tune please share on the Ed discussion board!
 ## Topics Covered
 
 Linked data structures (trees), recursion, classes, RAII, and dynamic memory.
+
+## Getting Started/Logistics
+
+Start up the docker container from the docker app. 
+
+We recommend creating a CS128 folder to keep all assignments for this semester. Download the starter files onto your computer by visiting this link, [Starter Code]().
+Unzip the folder with the starter files in the CS128 folder you created. Open up a new window of VS Code. Click "Open..." and navigate to the folder called "student-seam-carver-main". Click "open".
+
+See [setup instructions](https://www.cs128live.org/course-book/resource/Setup)
+
+When you are done with each part, submit on Prairie Learn via the autograder, linked above for each part.
 
 ## Background Information
 
@@ -99,7 +110,7 @@ end of every member function. Note, you can use `this` to access your own addres
 
 #### Image of 4 valid connected MotifNodes.
 
-![enter image description here](https://www.cs128live.org/MotifNodeExample.png)
+<img src="https://www.cs128live.org/MotifNodeExample.png" alt="MotifNode Example" width="500px">
 
 A `MusicalTree` maintains `MotifNodes` on the free store/heap. It keeps track of the root of the tree, the current size (number of connected `MotifNodes`), and a variable 
 called verbose_ which indicates if your code should print the output for grading or not.
@@ -238,11 +249,11 @@ less than the threshold. B would rotate up and replace A. B would now have the c
 The PruneNodes function is a required function and must implement the above steps for full points. 
 The function itself does not need any print statements.
 
-#### Image a valid Musical Tree BEFORE pruning.
-![enter image description here](https://www.cs128live.org/MuscialTreePre.png)
+#### Image of a valid Musical Tree BEFORE pruning.
+<img src="https://www.cs128live.org/MusicalTreePre.png" alt="Musical Tree Before Pruning" width="500px">
 
-#### Image a valid Musical Tree After pruning anything below a fitness score of 50 (involved a rotation).
-![enter image description here](https://www.cs128live.org/MuscialTreePost.png)
+#### Image of a valid Musical Tree AFTER pruning anything below a fitness score of 50 (involved a rotation).
+<img src="https://www.cs128live.org/MusicalTreePost.png" alt="Musical Tree After Pruning" width="500px">
 
 During each generation there will be a pruning phase which does need print statements.
 ``` 
