@@ -65,7 +65,7 @@ const ResourcePage = () => {
           )}
 
           {showMP3 && (
-            <Link href="/course-book/mps/MusicalTree">
+            <Link href="/course-book/mps/MusicalTrees">
               <div className="mb-4 border-4 border-blue-500 rounded-lg shadow-sm w-80 h-30 flex-shrink-0 hover:shadow-lg transition-shadow duration-300">
                 <div className="flex flex-col justify-center p-6">
                   <h3 className="text-xl font-semibold text-center">

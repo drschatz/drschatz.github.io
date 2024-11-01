@@ -67,193 +67,193 @@
   },
   {
     "idx": 12,
-    "topic": "Review",
+    "topic": "Lec 5.1: Review",
     "date": "2024-09-23",
     "link": "/NA"
   },
   {
     "idx": 13,
-    "topic": "Git, binary, error messages",
+    "topic": "Lec 5.2: AI",
     "date": "2024-09-25",
     "link": "/NA"
   },
   {
     "idx": 14,
-    "topic": "Exam 1 Debrief ",
+    "topic": "Lec 5.3: Review ",
     "date": "2024-09-27",
     "link": "/NA"
   },
   {
     "idx": 15,
-    "topic": "Pointers",
+    "topic": "Lec 6.1: Pointers",
     "date": "2024-09-30",
     "link": "/NA"
   },
   {
     "idx": 16,
-    "topic": "Arrays and the Command Line",
+    "topic": "Lec 6.2: Arrays and the Command Line",
     "date": "2024-10-02",
     "link": "/NA"
   },
   {
     "idx": 17,
-    "topic": "Dynamic Memory and the Stack",
+    "topic": "Lec 6.3: Dynamic Memory and the Stack",
     "date": "2024-10-04",
     "link": "/NA"
   },
   {
     "idx": 18,
-    "topic": "RAII and Destructors",
+    "topic": "Lec 7.1: RAII and Destructors",
     "date": "2024-10-07",
     "link": "/NA"
   },
   {
     "idx": 19,
-    "topic": "Growing an Array",
+    "topic": "Lec 7.2: Growing an Array",
     "date": "2024-10-09",
     "link": "/NA"
   },
   {
     "idx": 20,
-    "topic": "Big Three",
+    "topic": "Lec 7.3: Big Three",
     "date": "2024-10-11",
     "link": "/NA"
   },
   {
     "idx": 21,
-    "topic": "Big Three",
+    "topic": "Lec 8.1: Big Three",
     "date": "2024-10-14",
     "link": "/NA"
   },
   {
     "idx": 22,
-    "topic": "Templates",
+    "topic": "Lec 8.2: Templates",
     "date": "2024-10-16",
     "link": "/NA"
   },
   {
     "idx": 23,
-    "topic": "Templates",
+    "topic": "Lec 8.3: Templates",
     "date": "2024-10-18",
     "link": "/NA"
   },
   {
     "idx": 24,
-    "topic": "Linked Lists",
+    "topic": "No Lecture",
     "date": "2024-10-21",
     "link": "/NA"
   },
   {
     "idx": 25,
-    "topic": "Linked Lists",
+    "topic": "Lec 9.2: Linked Lists",
     "date": "2024-10-23",
     "link": "/NA"
   },
   {
     "idx": 26,
-    "topic": "Recursion",
+    "topic": "Lec 9.3: Linked Lists",
     "date": "2024-10-25",
     "link": "/NA"
   },
   {
     "idx": 27,
-    "topic": "Review",
+    "topic": "Lec 10.1: Review",
     "date": "2024-10-28",
     "link": "/NA"
   },
   {
     "idx": 28,
-    "topic": "Exam 2",
+    "topic": "Lec 10.2: Databases",
     "date": "2024-10-30",
     "link": "/NA"
   },
   {
     "idx": 29,
-    "topic": "Debrief",
+    "topic": "Lec 10.3: Trees",
     "date": "2024-11-01",
     "link": "/NA"
   },
   {
     "idx": 30,
-    "topic": "Recursion/Trees",
+    "topic": "Lec 11.1: Recursion/Trees",
     "date": "2024-11-04",
     "link": "/NA"
   },
   {
     "idx": 31,
-    "topic": "BST",
+    "topic": "Lec 11.2: BST",
     "date": "2024-11-06",
     "link": "/NA"
   },
   {
     "idx": 32,
-    "topic": "BST",
+    "topic": "Lec 11.3: BST",
     "date": "2024-11-08",
     "link": "/NA"
   },
   {
     "idx": 33,
-    "topic": "Iterators",
+    "topic": "Lec 12.1: Iterators",
     "date": "2024-11-11",
     "link": "/NA"
   },
   {
     "idx": 34,
-    "topic": "Iterators",
+    "topic": "Lec 12.2: Iterators",
     "date": "2024-11-13",
     "link": "/NA"
   },
   {
     "idx": 35,
-    "topic": "Iterators",
+    "topic": "Lec 12.3: Iterators",
     "date": "2024-11-15",
     "link": "/NA"
   },
   {
     "idx": 36,
-    "topic": "Inheritance polymorphism",
+    "topic": "Lec 13.1: Inheritance polymorphism",
     "date": "2024-11-18",
     "link": "/NA"
   },
   {
     "idx": 37,
-    "topic": "Inheritance",
+    "topic": "Lec 13.2: Inheritance",
     "date": "2024-11-20",
     "link": "/NA"
   },
   {
     "idx": 38,
-    "topic": "Inheritance",
+    "topic": "Lec 13.3: Inheritance",
     "date": "2024-11-22",
     "link": "/NA"
   },
   {
     "idx": 39,
-    "topic": "Review",
+    "topic": "Lec 14.1: Review",
     "date": "2024-12-02",
     "link": "/NA"
   },
   {
     "idx": 40,
-    "topic": "Exams 3 Functons",
+    "topic": "Lec 14.2: Exams 3 Functons",
     "date": "2024-12-04",
     "link": "/NA"
   },
   {
     "idx": 41,
-    "topic": "Debrief",
+    "topic": "Lec 14.3: Debrief",
     "date": "2024-12-06",
     "link": "/NA"
   },
   {
     "idx": 42,
-    "topic": "Graphs",
+    "topic": "Lec 15.1: Graphs",
     "date": "2024-12-09",
     "link": "/NA"
   },
   {
     "idx": 43,
-    "topic": "BFS Graphs",
+    "topic": "Lec 15.2: BFS Graphs",
     "date": "2024-12-11",
     "link": "/NA"
   }
