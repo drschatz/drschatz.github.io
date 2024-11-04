@@ -96,5 +96,20 @@
     "date": "2024-10-23",
     "due_date": "2024-10-25",
     "link": "https://us.prairielearn.com/pl/course_instance/153040/assessment/2471225"
+  },
+  {
+    "idx": 15,
+    "topic": "HW 11.1 : Recursion",
+    "date": "2024-11-04",
+    "due_date": "2024-11-06",
+    "link": "https://us.prairielearn.com/pl/course_instance/153040/assessment/2475611"
+  },
+  {
+    "idx": 16,
+    "topic": "HW 11.2 : BST",
+    "date": "2024-11-06",
+    "due_date": "2024-11-08",
+    "link": ""
   }
+
 ]
