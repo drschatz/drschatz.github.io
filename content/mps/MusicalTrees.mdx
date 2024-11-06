@@ -244,7 +244,7 @@ This phase removes nodes from the tree that have a motif that evaluates below a 
 Afterward, if the node still has children, rotate up its most recently added child into its own place, combining their children.
 
 For example, if Node A has the children [B, C, D] and Node B has the children [E, F]. Let's say Node A is the only node out of the mentioned ones that has a fitness score
-less than the threshold. B would rotate up and replace A. B would now have the children [C, D, E, F] and B's parent would now be whoever A's parent was. 
+less than the threshold. D would rotate up and replace A. D would now have the children [B, C, E, F] and D's parent would now be whoever A's parent was. 
 
 The PruneNodes function is a required function and must implement the above steps for full points. 
 The function itself does not need any print statements.
