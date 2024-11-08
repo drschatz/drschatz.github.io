@@ -162,9 +162,9 @@ can print as little or as much as you would like.
 ## Genetic Algorithm Details
 
 Your code in the GeneticAlgorithm function should run the following high level steps (details below):
-1. Pre-Evolve [selection + reproduction] (2 - 10 times) **you decide how many
+1. Pre-Evolve [selection + reproduction] (2 - 4 times) **you decide how many
 2. Go through X number of generations **X is a parameter to the function
-   - Evolve [selection + reproduction] (2 - 10 times) **you decide how many
+   - Evolve [selection + reproduction] (2 - 4 times) **you decide how many
    - Prune (details below)
 3. After all the generations are run, do the final prune
 
@@ -174,7 +174,7 @@ cout << "EVOLVE" << endl;
 
 See the selection and reproduction phase details below for their print statements
 
-For every generation, start by printing, 
+For every generation (starting at 0), start by printing, 
 cout << "GEN " << generation << " size: " << size_ << endl;
 ```
 
@@ -182,9 +182,8 @@ cout << "GEN " << generation << " size: " << size_ << endl;
 
 Traverse every node in the tree and select a subset of nodes based on the following:
 
-- if `RP < SP(node)` --> select node
-  - `RP`: Random probability, a random value between 0 and 1
-  - `SP(node)`: Selection probability of a node: max value between the fitness score of the node divided by 100 or 0.10
+- if `SP < FitnessScore(node)/100` --> select node
+  - `SP`: Selection probability, a random value between 0 and 1
 
 #### Selection Phase Verbose Printing Requirements
 
