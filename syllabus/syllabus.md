@@ -94,7 +94,8 @@ You have the opportunity to earn up to 1,000 points in the course. Based on your
 | 770 \- 799   | C+    |
 | 730 \- 769   | C     |
 | 700 \- 729   | C-    |
-| 0 \- 699     | D     |
+| 600 \- 699   | D     |
+| 0 \- 599     | F     |
 
 \*\*Note your points will be rounded up to the nearest whole number and the cutoffs may change slightly in your favor.
 
