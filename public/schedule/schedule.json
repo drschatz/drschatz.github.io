@@ -1923,8 +1923,8 @@
         "mp_link": "",
         "mp_due_topic": "",
         "mp_due_link": "",
-        "ec_topic": "",
-        "ec_link": "",
+        "ec_topic": "Practice Exam 3 - Extra Credit",
+        "ec_link": "https://us.prairielearn.com/pl/course_instance/153040/assessment/2482545",
         "ec_due_topic": "",
         "ec_due_link": "",
         "quiz_topic": "",
@@ -2194,8 +2194,8 @@
         "mp_due_link": "",
         "ec_topic": "",
         "ec_link": "",
-        "ec_due_topic": "",
-        "ec_due_link": "",
+        "ec_due_topic": "Practice Exam 3 - Extra Credit",
+        "ec_due_link": "https://us.prairielearn.com/pl/course_instance/153040/assessment/2482545",
         "quiz_topic": [
             "Exam 3"
         ],
@@ -2258,10 +2258,14 @@
         "ec_link": "",
         "ec_due_topic": "",
         "ec_due_link": "",
-        "quiz_topic": "",
-        "quiz_link": "",
-        "quiz_due_topic": "",
-        "quiz_due_link": ""
+        "quiz_topic": [
+            "Exam 3: Second Chance"
+        ],
+        "quiz_link": [
+            "/NA"
+        ],
+        "quiz_due_topic": [],
+        "quiz_due_link": []
     },
     {
         "day_idx": 77,
@@ -2287,10 +2291,14 @@
         "ec_link": "",
         "ec_due_topic": "",
         "ec_due_link": "",
-        "quiz_topic": "",
-        "quiz_link": "",
-        "quiz_due_topic": "",
-        "quiz_due_link": ""
+        "quiz_topic": [
+            "Exam 3: Second Chance"
+        ],
+        "quiz_link": [
+            "/NA"
+        ],
+        "quiz_due_topic": [],
+        "quiz_due_link": []
     },
     {
         "day_idx": 78,
@@ -2316,10 +2324,14 @@
         "ec_link": "",
         "ec_due_topic": "",
         "ec_due_link": "",
-        "quiz_topic": "",
-        "quiz_link": "",
-        "quiz_due_topic": "",
-        "quiz_due_link": ""
+        "quiz_topic": [
+            "Exam 3: Second Chance"
+        ],
+        "quiz_link": [
+            "/NA"
+        ],
+        "quiz_due_topic": [],
+        "quiz_due_link": []
     },
     {
         "day_idx": 79,
